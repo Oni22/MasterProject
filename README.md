@@ -29,9 +29,9 @@ Zur Unterstützung kannst du dir folgende Tutorials anschauen:
 
 ## 3)  Aufgabe Client-Side
 
-Unter dem Order `client/src/components/HelloWorld.vue` findest du das Frontend. Für das Frontend wird Vue.js verwendet. Das Projekt ist soweit vorbereitet, dass du nur noch die Request anlegen und die Daten verarbeiten musst. Du brauchst keine Veränderungen am Code vorzunehmen. Konzentriere dich auschließlich auf die Funktionen `getShopREST` und `getShopGRAPQHL`. Diese beiden Funktionen sollen Requests versenden die einen Shop anhand seiner Id ermitteln und dessen Produkte zur Verfügung stellen.
+Unter dem Order `client/src/components/HelloWorld.vue` findest du das Frontend. Für das Frontend wird Vue.js verwendet. Das Projekt ist soweit vorbereitet, dass du nur noch die Request anlegen und die Daten verarbeiten musst. Du brauchst keine Veränderungen am Code vorzunehmen. Konzentriere dich auschließlich auf die Funktionen `getShopREST` und `getShopGRAPQHL`. 
 
-Die Aufgabe besteht darin die Daten eines Shops und die dazu gehörigen Produkte anzuzeigen.
+Sobald auf "Nächster Shop" geklickt wird sollen die gennanten Funktionen einen Shop anhand ihrer ID und die dazugehörigen Produkte fetchen.
 
 Für den Shop sollen folgende Daten angezeigt werden:
 
