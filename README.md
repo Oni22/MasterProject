@@ -63,7 +63,7 @@ Du muss am Frontend Code nichts ändern, sondern nur die Daten an folgende Varia
 - restData.products (String Array)
 - currentProductREST (Product Object)
 
-Achte weiterhin darauf, dass du die variablen `shopIndexREST` und `shopIndexGRAPHQL` in deine Requests einbaust, um bestimmte Shops zu fetchen. Diese Variablen sind für den Zweck der Umfrage Hardgecoded und sollten nicht verändert werden. Der Shop Index wird bereits vom Frontend Code gehandelt.
+Achte weiterhin darauf, dass du die variablen `shopIdREST` und `shopIdGRAPHQL` in deine Requests einbaust, um ein Shop anhand der ID zu fetchen. Diese Variablen sind für den Zweck der Umfrage Hardgecoded und sollten nicht verändert werden. Der Shop Index wird bereits vom Frontend Code gehandelt und erhöht sich sobald auf "Nächster Shop" geklickt wird.
 
 TIPP: Wenn du den Client oder Server Code speicherts brauchst du die Applikation nicht neu starten. Deine Veränderungen werden sofort übernommen.
 

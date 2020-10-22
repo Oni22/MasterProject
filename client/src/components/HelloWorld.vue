@@ -52,8 +52,8 @@
       //Here you can create your variables
       baseUrlREST: "http://localhost:3000",
       baseUrlGRAPHQL: "http://localhost:4000",
-      shopIndexREST: 0,
-      shopIndexGRAPHQL: 0,
+      shopIdREST: 0,
+      shopIdGRAPHQL: 0,
       productIndexREST: 0,
       currentProductREST: null,
       currentProductGRAPHQL: null,
@@ -108,10 +108,10 @@
         // For this use case the length of the shops are hardcoded do not change this.
         this.currentProductREST = null;
         this.productIndexREST = 0;
-        if(this.shopIndexREST == 1) {
-          this.shopIndexREST = 0;
+        if(this.shopIdREST == 1) {
+          this.shopIdREST = 0;
         } else {
-          this.shopIndexREST++;
+          this.shopIdREST++;
         }
         this.getShopREST()
       },
@@ -119,10 +119,10 @@
         // For this use case the length of the shops are hardcoded do not change this.
         this.currentProductGRAPHQL = null;
         this.productIndexGRAPHQL = 0;
-        if(this.shopIndexGRAPHQL == 1) {
-          this.shopIndexGRAPHQL = 0;
+        if(this.shopIdGRAPHQL == 1) {
+          this.shopIdGRAPHQL = 0;
         } else {
-          this.shopIndexGRAPHQL++;
+          this.shopIdGRAPHQL++;
         }
         this.getShopGRAPHQL()
       },
