@@ -29,7 +29,7 @@ Zur Unterstützung kannst du dir folgende Tutorials anschauen:
 
 ## 3)  Aufgabe Client-Side
 
-Unter dem Order `client/src/components/HelloWorld.vue` findest du das Frontend. Für das Frontend wird Vue.js verwendet. Das Projekt ist soweit vorbereitet, dass du nur noch die Request anlegen und die Daten verarbeiten musst. Du brauchst keine Veränderungen am Code vorzunehmen. Konzentriere dich auschließlich auf die Funktionen `getShopREST` und `getShopGRAPQHL`. In diese Funktionen kannst du deine Requests einbauen für die jeweilige API.
+Unter dem Order `client/src/components/HelloWorld.vue` findest du das Frontend. Für das Frontend wird Vue.js verwendet. Das Projekt ist soweit vorbereitet, dass du nur noch die Request anlegen und die Daten verarbeiten musst. Du brauchst keine Veränderungen am Code vorzunehmen. Konzentriere dich auschließlich auf die Funktionen `getShopREST` und `getShopGRAPQHL`. Diese beiden Funktionen sollen Requests versenden die einen Shop anhand seiner Id ermitteln und dessen Produkte zur Verfügung stellen.
 
 Die Aufgabe besteht darin die Daten eines Shops und die dazu gehörigen Produkte anzuzeigen.
 
@@ -47,21 +47,17 @@ Für ein Produkt sollen folgende Daten angezeigt werden:
 - Menge
 - Hersteller
 
-Wenn auf "Nächster Shop" geklickt wird soll der nächste Shop gefetcht und angezeigt werden. Der Button "Nächstes Produkt" zeigt die Produkte an die dieser Shop anbietet.
-
 Du musst am Frontend Code nichts ändern, sondern nur die Daten an folgende Variablen übergeben:
 
 - graphQLData.shopName (String)
 - graphQLData.shopAddress (String)
 - graphQLData.shopCity (String)
 - graphQLData.products (String Array)
-- currentProductGRAPHQL (Product Object)
 
 - restData.shopName (String)
 - restData.shopAddress (String)
 - restData.shopCity (String)
 - restData.products (String Array)
-- currentProductREST (Product Object)
 
 Achte weiterhin darauf, dass du die variablen `shopIdREST` und `shopIdGRAPHQL` in deine Requests einbaust, um ein Shop anhand der ID zu fetchen. Diese Variablen sind für den Zweck der Umfrage hardgecoded und sollten nicht verändert werden. Der Shop Index wird bereits vom Frontend Code gehandelt und erhöht sich sobald auf "Nächster Shop" geklickt wird.
 

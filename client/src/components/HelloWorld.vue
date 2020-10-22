@@ -9,12 +9,12 @@
             <p>Adresse: {{graphQLData.shopAddress}}</p>
             <p>Stadt: {{graphQLData.shopCity}}</p>
             <h1>Produkt:</h1>
-            <div v-if="currentProductGRAPHQL !== null">
-              <p>Produktname: {{currentProductGRAPHQL.name}}</p>
-              <p>Gewicht: {{currentProductGRAPHQL.weight}}</p>
-              <p>Preis: {{currentProductGRAPHQL.price}}</p>
-              <p>Hersteller: {{currentProductGRAPHQL.manufacturer}}</p>
-              <v-btn class="mt-3" color="secondary" @click="nextProductGRAPHQL">Nächstes Produkt</v-btn>
+            <div v-for="(product,index) in graphQLData.products" :key="index">
+              <p>Produktname: {{product.name}}</p>
+              <p>Gewicht: {{product.weight}}</p>
+              <p>Preis: {{product.price}}</p>
+              <p>Hersteller: {{product.manufacturer}}</p>
+              <p>------------------------------</p>
             </div>
             <v-btn  class="mt-3 mb-3" color="secondary" @click="nextShopGraphQL">Nächster Shop</v-btn>
           </v-card>
@@ -26,12 +26,12 @@
             <p>Adresse: {{restData.shopAddress}}</p>
             <p>Stadt: {{restData.shopCity}}</p>
             <h1>Produkt:</h1>
-            <div v-if="currentProductREST !== null">
-              <p>Produktname: {{currentProductREST.name}}</p>
-              <p>Gewicht: {{currentProductREST.weight}}</p>
-              <p>Preis: {{currentProductREST.price}}</p>
-              <p>Hersteller: {{currentProductREST.manufacturer}}</p>
-              <v-btn class="mt-3" color="secondary" @click="nextProductREST">Nächstes Produkt</v-btn>
+            <div v-for="(product,index) in restData.products" :key="index">
+              <p>Produktname: {{product.name}}</p>
+              <p>Gewicht: {{product.weight}}</p>
+              <p>Preis: {{product.price}}</p>
+              <p>Hersteller: {{product.manufacturer}}</p>
+              <p>------------------------------</p>
             </div>
             <v-btn  class="mt-3 mb-3" color="secondary" @click="nextShopREST">Nächster Shop</v-btn>
           </v-card>
@@ -54,10 +54,6 @@
       baseUrlGRAPHQL: "http://localhost:4000",
       shopIdREST: 0,
       shopIdGRAPHQL: 0,
-      productIndexREST: 0,
-      currentProductREST: null,
-      currentProductGRAPHQL: null,
-      productIndexGRAPHQL: 0,
       graphQLData: {
         shopName: "",
         shopAddress: "",
@@ -78,32 +74,6 @@
     },
     //Here you can create your methods
     methods: {
-      nextProductGRAPHQL() {
-
-        if(!this.graphQLData && this.graphQLData.length < 1) return
-
-        if(this.productIndexGRAPHQL == this.graphQLData.products.length - 1) {
-          this.productIndexGRAPHQL = 0;
-        } else {
-          this.productIndexGRAPHQL++;
-        }
-
-        this.currentProductGRAPHQL = this.graphQLData.products[this.productIndexGRAPHQL]
-
-      },
-      nextProductREST() {
-
-        if(!this.restData && this.restData.length < 1) return
-
-        if(this.productIndexREST == this.restData.products.length - 1) {
-          this.productIndexREST = 0;
-        } else {
-          this.productIndexREST++;
-        }
-
-        this.currentProductREST = this.restData.products[this.productIndexREST]
-
-      },
       nextShopREST() {
         // For this use case the length of the shops are hardcoded do not change this.
         this.currentProductREST = null;
