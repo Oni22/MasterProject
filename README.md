@@ -49,7 +49,7 @@ Für ein Produkt sollen folgende Daten angezeigt werden:
 
 Wenn auf "Nächster Shop" geklickt wird soll der nächste Shop gefetcht und angezeigt werden. Der Button "Nächstes Produkt" zeigt die Produkte an die dieser Shop anbietet.
 
-Du muss am Frontend Code nichts ändern, sondern nur die Daten an folgende Variablen übergeben:
+Du musst am Frontend Code nichts ändern, sondern nur die Daten an folgende Variablen übergeben:
 
 - graphQLData.shopName (String)
 - graphQLData.shopAddress (String)
@@ -63,7 +63,7 @@ Du muss am Frontend Code nichts ändern, sondern nur die Daten an folgende Varia
 - restData.products (String Array)
 - currentProductREST (Product Object)
 
-Achte weiterhin darauf, dass du die variablen `shopIdREST` und `shopIdGRAPHQL` in deine Requests einbaust, um ein Shop anhand der ID zu fetchen. Diese Variablen sind für den Zweck der Umfrage Hardgecoded und sollten nicht verändert werden. Der Shop Index wird bereits vom Frontend Code gehandelt und erhöht sich sobald auf "Nächster Shop" geklickt wird.
+Achte weiterhin darauf, dass du die variablen `shopIdREST` und `shopIdGRAPHQL` in deine Requests einbaust, um ein Shop anhand der ID zu fetchen. Diese Variablen sind für den Zweck der Umfrage hardgecoded und sollten nicht verändert werden. Der Shop Index wird bereits vom Frontend Code gehandelt und erhöht sich sobald auf "Nächster Shop" geklickt wird.
 
 TIPP: Wenn du den Client oder Server Code speicherts brauchst du die Applikation nicht neu starten. Deine Veränderungen werden sofort übernommen.
 
