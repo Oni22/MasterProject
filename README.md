@@ -5,7 +5,8 @@
 1. Navigieren in deiner console mit `cd server` in den server Ordner. Führe nun `npm install` aus. 
 2. Navigieren in deiner console mit `cd client` in den client Ordner. Führe nun `npm install` aus. 
 3. Navigieren wieder zum root Ordner des Projekts und führe `npm install` aus.
-3. Führe im Root Ordner des Projekts nun `npm run dev` aus um die Server und den Client zu starten
+5. Füge nodemon als gobale dependency hinzu mit `npm install -g nodemon`
+4. Führe im Root Ordner des Projekts nun `npm run dev` aus, um die Server und den Client zu starten
 
 Die Server und Clients sind erreichbar unter:
 
