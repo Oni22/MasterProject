@@ -61,12 +61,28 @@ Du musst am Frontend Code nichts ändern, sondern nur die Daten an folgende Vari
 
 Achte weiterhin darauf, dass du die variablen `shopIdREST` und `shopIdGRAPHQL` in deine Requests einbaust, um ein Shop anhand der ID zu fetchen. Diese Variablen sind für den Zweck der Umfrage hardgecoded und sollten nicht verändert werden. Der Shop Index wird bereits vom Frontend Code gehandelt und erhöht sich sobald auf "Nächster Shop" geklickt wird.
 
-TIPP: Wenn du den Client oder Server Code speicherts brauchst du die Applikation nicht neu starten. Deine Veränderungen werden sofort übernommen.
+TIPP 1: Wenn du den Client oder Server Code speicherts brauchst du die Applikation nicht neu starten. Deine Veränderungen werden sofort übernommen.
 
+TIPP 2: 
+
+Für non vue user: unter data() in HelloWorld.vue sind die variablen deklariert. Unter methods: { .... } sind die methoden deklariert wie z.B. getDataREST(). Um die variablen aus  data()  in den methods: {...} zu verwenden müsst ihr das this keyword verwenden.
+Beispiel:
+
+```
+data() {
+ restData: {
+   products:[]
+ }
+},
+methods: {
+ getDataREST() {
+     this.restData.products = ....
+  }
+}
+```
 ## 3) Umfrage
 
 Bitte beantworte zum Schluss folgende Umfrage: https://forms.gle/k4Ds46UnaS5SNe6z9
 
 Danke für deine Teilnahme! :)
 
-Bei Fragen kannst du mich unter onur-ozkan@hotmail.de kontaktieren.
