@@ -109,6 +109,19 @@
         //   console.log(err)
         // })
 
+        axios.get(this.baseUrlREST + "/shop/0" ,{}).then(res => {
+          this.restData.shopName = res.data.name
+          this.restData.shopAddress = res.data.address
+          this.restData.shopCity = res.data.city
+          axios.get(this.baseUrlREST + "/shop/0/products",{}).then(res => {
+          this.restData.products = res.data
+        }).catch(err => {
+          console.log(err)
+        })
+        }).catch(err => {
+          console.log(err)
+        })
+
       },
       getShopGRAPHQL() {
         
@@ -122,6 +135,19 @@
         // }).catch(err => {
         //   console.log(err)
         // })
+
+        axios.post(this.baseUrlGRAPHQL + "/graphql",{
+    query: 'query {shop(id: ' + "\"" + this.shopIdGRAPHQL + "\"" + ") { name, address,city} " + 'shopProducts(id: ' + "\"" + this.shopIdGRAPHQL + "\"" + ") { name,weight,price,manufacturer } }"
+  }).then(res => {
+    this.graphQLData.shopName = res.data.data.shop.name
+    this.graphQLData.shopAddress = res.data.data.shop.address
+        this.graphQLData.shopCity = res.data.data.shop.city
+
+    this.graphQLData.products = res.data.data.shopProducts
+    this.currentProductGRAPHQL = res.data.data.shopProducts[0]
+  }).catch(err => {
+    console.log(err)
+  })
 
       }
     }

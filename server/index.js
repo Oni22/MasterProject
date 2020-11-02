@@ -6,7 +6,8 @@ const graphql = express();
 //Shops db and products db
 var { shops, products } = require('./db')
 var cors = require('cors')
-
+var { graphqlHTTP } = require('express-graphql');
+var { buildSchema, GraphQLSchema, GraphQLObjectType,GraphQLString,GraphQLList } = require('graphql');
 rest.use(cors())
 rest.use(express.json())
 graphql.use(cors())

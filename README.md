@@ -20,7 +20,7 @@ Client (Vue.js App) --> `localhost:8080`
 
 ## 2)  Aufgabe Server-Side
 
-Die Aufgabe besteht darin eine REST API und GraphQL API in das bestehende Projekt zu implementieren. Unter `server/index.js` kannst du die APIs einbauen. In diesem Projekt wird express.js für die Erstellung der APIs verwendet. Das Grundgerüst der API ist vorhanden du musst nur noch die Endpoints anlegen. Die Datenbanken sind bereits angelegt und in der index.js impelementiert. Du kannst sie mit `shops` und `products` ansprechen. Die Datenbank selbst findest du unter `server/db.js.` 
+Die Aufgabe besteht darin eine REST API und GraphQL API in das bestehende Projekt zu implementieren. Unter `server/index.js` kannst du die APIs einbauen. In diesem Projekt wird express.js für die Erstellung der APIs verwendet. Das Grundgerüst der API ist vorhanden du musst nur noch die Endpoints anlegen. Die Datenbanken sind bereits angelegt und in der index.js impelementiert. Du kannst sie mit `shops` und `products` ansprechen. Die Datenbank selbst findest du unter `server/db.js`. Jede Datenbank sollte ihren eigenen Endpoint bzw. Query haben. 
 
 Zur Unterstützung kannst du dir folgende Tutorials anschauen:
 
